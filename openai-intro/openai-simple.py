@@ -9,8 +9,11 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 response = client.chat.completions.create(
     model="gpt-4o-mini",
     messages=[
-        {"role": "system", "content": "You are a helpful assistant."},
-        {"role": "user", "content": "What is the purpose of life?"}
+        {"role": "system", "content": "You are a college professor."},
+        {"role": "user", "content": """write me a short essay about agentic ai. 
+         write the essay in english.
+         make sure to include a title.
+         """},
     ]
 )
 
